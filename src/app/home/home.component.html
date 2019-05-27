@@ -1,0 +1,11 @@
+  <div class="card" style="width: 18rem;" *ngFor = 'let product of products'>
+    <img class="card-img-top" src='{{ product.img }}' alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title"> {{ product.title }}</h5>
+      <p class="card-text"> $ {{ product.price }}  </p>
+      <button value= '{{ product.id}}'  routerLink = '/checkout' (click)= "addToCart($event)"  class="btn btn-primary">Buy now</button>
+      <button value= '{{ product.id}}'  routerLink = '/cart'  (click)= "addToCart($event)" class="btn btn-primary right">Add to cart</button>
+    </div>
+  </div>
+
+

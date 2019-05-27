@@ -1,0 +1,29 @@
+<div class="card" *ngFor ='let product of products'>
+    <div class="card-body">
+      <img class="cartImg left col-md-12" src='{{ product.img }}' alt="Card image cap">
+      <br>
+      <br>
+      <br>
+      <br>
+      <h5 class="card-title left bottom">{{ product.title}} </h5>
+      <h5 class="card-title ">{{ product.quantity}} x</h5>
+      <h5 class="card-text right">$ {{ product.price}}</h5>
+    </div>
+  </div>
+<hr>
+
+    <div class='total col-md-4 col-4 left'>
+      Total
+    </div>
+
+    <div class='total col-md-4 col-4 '>
+        {{ number }}
+      </div>
+
+      <div class='total col-md-4 right col-4 '>
+         $ {{ price }}
+        </div>
+      <div class='total col-md-12'>
+        <a href="#" routerLink='/checkout' class="btn btn-primary right">Checkout</a>
+      </div>
+
